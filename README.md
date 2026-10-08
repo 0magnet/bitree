@@ -59,11 +59,13 @@ defaults shown above.
 | `ColSep` | Separator between trailing columns |
 | `AlignColumns` | Column block alignment |
 | `StyleCell` | `func(text string, kind CellKind) string`, called per cell after layout |
+| `HeaderLeft`, `HeaderLabel`, `HeaderCols` | When any is set, a header row of column labels above the root, aligned with the columns beneath it |
 
 `StyleCell` is the reason layout and styling are separable: geometry is computed
 from the plain text first, so returning ANSI-wrapped or HTML-wrapped text does
-not shift alignment. `CellKind` distinguishes the root, spine, labels and
-columns.
+not shift alignment. `CellKind` distinguishes the root (`CellRoot`), right labels
+(`CellLabel`), trailing columns (`CellColumn`), left blocks (`CellLeft`) and the
+header row's three fields (`CellHeaderLeft`, `CellHeaderLabel`, `CellHeaderColumn`).
 
 ## Notes
 
