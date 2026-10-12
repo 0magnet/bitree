@@ -75,3 +75,35 @@ handled.
 
 Extracted from [skywire](https://github.com/skycoin/skywire), where it draws
 `skywire cli tp tree`.
+
+## Dependency Graph
+
+Made with [goda](https://github.com/loov/goda):
+
+```
+go run github.com/loov/goda@latest graph github.com/0magnet/bitree/... | dot -Tsvg -o docs/bitree-goda-graph.svg
+```
+
+![Dependency Graph](docs/bitree-goda-graph.svg "github.com/0magnet/bitree Dependency Graph")
+
+## Lines of Code
+
+Made with [gocloc](https://github.com/hhatto/gocloc) (excludes `vendor/`, `node_modules/`, `.git/`):
+
+```
+gocloc --not-match-d='(vendor|node_modules|\.git)' .
+```
+
+```
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Go                               2             40            138            520
+Makefile                         1             22             52            111
+YAML                             1              0              7             98
+Markdown                         1             23              0             85
+Bourne Shell                     1              8             17             31
+-------------------------------------------------------------------------------
+TOTAL                            6             93            214            845
+-------------------------------------------------------------------------------
+```
