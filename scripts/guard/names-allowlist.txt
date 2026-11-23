@@ -1,0 +1,2 @@
+bitree.go:row.hasLeft
+bitree.go:row.hasRight
